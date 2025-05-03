@@ -96,8 +96,8 @@ public class MenuService {
 				staff = (StaffModel) personRepo.findById(staffIdInput);
 				if(staff.getManagerId() != null) {
 					previousManagerId = staff.getManagerId();
-					break;
-				} else break;
+				}
+				break;
 			} catch (Exception e) {
 				System.out.println("Id nhân viên không tồn tại!");
 				sc.nextLine();
@@ -109,7 +109,9 @@ public class MenuService {
 				manager = (ManagerModel) personRepo.findById(managerIdInput);
 				if(managerIdInput == previousManagerId) {
 					System.out.println("Nhân viên '" + staff.getName() + "' đã được phân bổ cho quản lý '" + manager.getName() + "'. Hãy nhập quản lý khác.");
-				} else break;
+					continue;
+				}
+				break;
 			} catch (Exception e) {
 				System.out.println("Id quản lý không tồn tại!");
 				sc.nextLine();
