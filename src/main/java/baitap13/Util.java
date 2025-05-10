@@ -15,6 +15,7 @@ public class Util {
         System.out.println("10. Sắp xếp nhân viên toàn công ty theo thứ tự lương giảm dần");
         System.out.println("11. Tìm Giám Đốc có số lượng cổ phần nhiều nhất");
         System.out.println("12. Tính và Xuất tổng THU NHẬP của từng Giám Đốc");
+        System.out.println("13. Thoát");
         System.out.println("==================================================================");
 	}
 }
